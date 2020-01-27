@@ -34,15 +34,16 @@ window.addEventListener('load', event => {
       <div class="card" data-card-name="${pic.name}">
         <div class="back" name="${pic.img}"></div>
         <div class="front" style="background: url(img/${pic.img}) no-repeat"></div>
-      </div>
+        </div>
     `;
   }
 
   // Bind the click event of each element to a function
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
+      card.classList.add('turned');
       // TODO: write some code here
-      console.log('Card clicked: ', card);
+      console.log('Card clicked: ', card.classList);
     });
   });
 });
